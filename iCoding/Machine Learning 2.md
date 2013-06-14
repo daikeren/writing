@@ -47,15 +47,27 @@
 </tbody>
 </table>
 
-在這邊，我們有 4 組 training examples (*m*=4) 組成了 **training sets**，4 組 training examples 分別為 (38, 4605)、(20, 2033)、(32, 3651)、(80, 8730)。通常，我們會用 (*x*<sup>(i)</sup>, *y*<sup>(i)</sup>) 來代表第 *i* 組的 training example。以這組例子來說，(*x*<sup>(1)</sup>, *y*<sup>(1)</sup>) = (38, 4605)。*x* 是坪數，*y* 則是房價。
+在這邊，我們有 4 組 training examples (_m_=4) 組成了 **training sets**，4 組 training examples 分別為 (38, 4605)、(20, 2033)、(32, 3651)、(80, 8730)。通常，我們會用 (_x_<sup>(i)</sup>, _y_<sup>(i)</sup>) 來代表第 _i_ 組的 training example。以這組例子來說，(_x_<sup>(1)</sup>, _y_<sup>(1)</sup>) = (38, 4605)。_x_ 是坪數，_y_ 則是房價。
 
 在這個問題當中，我們要做的事情基本上可以用下圖來說明：
 
 ![machine learning flow](images/Machine Learning 2-1.png)
 
-首先，我們有了 training sets 之後，餵給我們的 Machine Learning Algorithm，接著由我們的演算法產生出一個 hypothesis function *h*，最後再用這個 hypothesis function *h* 來根據房屋的坪數來預估價格。
+首先，我們有了 training sets 之後，餵給我們的 Machine Learning Algorithm，接著由我們的演算法產生出一個 hypothesis function _h_，最後再用這個 hypothesis function _h_ 來根據房屋的坪數來預估價格。
 
-在這邊，我們假設我們的 hypothesis function *h* 會是線性的，也就是說 *h*<sub>Θ</sub>(*x*) = *Θ<sub>0</sub>+Θ<sub>1</sub>x*。我們的 Machine Learning Algorithm 就是要根據 training sets 找出 *Θ<sub>0</sub>* 還有 *Θ<sub>1</sub>* 的值。
+在這邊，我們假設我們的 hypothesis function _h_ 會是線性的，也就是說 _h_<sub>Θ</sub>(_x_) = _Θ<sub>0</sub>+Θ<sub>1</sub>x_。我們的 Machine Learning Algorithm 就是要根據 training sets 找出 _Θ<sub>0</sub>_ 還有 _Θ<sub>1</sub>_ 的值。
 
 ### Cost Function
+
+
+
+### Gradient Descent
+
+
+
+### Gradient Descent for Linear Regression
+
+
+
+### 結論
 
