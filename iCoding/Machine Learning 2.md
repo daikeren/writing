@@ -59,7 +59,21 @@
 
 ### Cost Function
 
+![cost function for linear regression](images/Machine Learning 2-2.png)
 
+用圖示的方式來說明也許會更清楚，圖中每個 X 的都代表了一個 training example，而我們的任務就是要找到圖中的直線  _h_<sub>Θ</sub>(_x_) = _Θ<sub>0</sub>+Θ<sub>1</sub>x_。那麼要怎麼選擇  _Θ<sub>0</sub>_ 還有 _Θ<sub>1</sub>_ 的值呢？我們的目標是希望找出的 _Θ<sub>0</sub>_ 還有 _Θ<sub>1</sub>_ 可以讓每一個 _h_<sub>Θ</sub>(_x<sup>(i)</sup>_) 都跟 _y<sup>(i)</sup>_ 越接近越好。
+
+這邊我們會用到一般最常用的 square root error，寫成數學式如下：
+
+![](images/Machine Learning 2- eq1.png)
+
+我們可以寫成
+
+![](images/Machine Learning 2- eq2.png)
+
+![](images/Machine Learning 2- eq3.png)
+
+在這邊，我們會把 _J(_Θ<sub>0</sub>_, _Θ<sub>1</sub>_)_ 叫做 cost function。
 
 ### Gradient Descent
 
