@@ -98,6 +98,10 @@
 
 呢？讓我們來做點簡單的數學推導
 
+![](images/Machine Learning 2- eq5.png)
+
+所以原來的演算法變成
+
 
 
 ### 結論
