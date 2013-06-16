@@ -1,6 +1,6 @@
 ## 前言
 
-這一系列是 Machine Learning 相關筆記，前情提要可以參考之前的文章 [Machine Learning 筆記 (1) – 簡介](http://www.icoding.co/2013/06/machine-learning-1-intro)。看完了對於 Machine Learning 的簡介之後，接下來我們要來進入真正的 Machine Learning 部分了。從這邊開始將不再輕鬆，會開始有些討厭的數學式子出現，不過也唯有熬過這些，你才可以從嘴砲人晉升成為真正對 Machine Learning 略懂略懂的人。大家一起學習吧！
+這一系列是 Machine Learning 相關筆記，前情提要可以參考之前的文章 [Machine Learning 筆記 (1) – 簡介](http://www.icoding.co/2013/06/machine-learning-1-intro)。看完了對於 Machine Learning 的簡介之後，接下來我們要來進入真正的 Machine Learning 部分了。從這邊開始將不再輕鬆，會開始有些討厭的數學式子出現，也會需要一些基本的微積分。不過也唯有熬過這些，你才可以從嘴砲人晉升成為真正對 Machine Learning 略懂略懂的人。大家一起學習吧！
 
 ## Linear Regression with One Variable
 
@@ -63,11 +63,11 @@
 
 用圖示的方式來說明也許會更清楚，圖中每個 X 的都代表了一個 training example，而我們的任務就是要找到圖中的直線  _h_<sub>Θ</sub>(_x_) = _Θ<sub>0</sub>+Θ<sub>1</sub>x_。那麼要怎麼選擇  _Θ<sub>0</sub>_ 還有 _Θ<sub>1</sub>_ 的值呢？我們的目標是希望找出的 _Θ<sub>0</sub>_ 還有 _Θ<sub>1</sub>_ 可以讓每一個 _h_<sub>Θ</sub>(_x<sup>(i)</sup>_) 都跟 _y<sup>(i)</sup>_ 越接近越好。
 
-這邊我們會用到一般最常用的 square root error，寫成數學式如下：
+我們會用到一般最常用的 square root error。我們的目的是最小化 _h_<sub>Θ</sub>(_x<sup>(i)</sup>_) 和 _y<sup>(i)</sup>_ 之間的 square root error，寫成數學式如下：
 
 ![](images/Machine Learning 2- eq1.png)
 
-我們可以寫成
+可以寫成
 
 ![](images/Machine Learning 2- eq2.png)
 
@@ -75,11 +75,28 @@
 
 在這邊，我們會把 _J(_Θ<sub>0</sub>_, _Θ<sub>1</sub>_)_ 叫做 cost function。
 
-### Gradient Descent
+### Gradient Descent Algorithm
 
+到目前為止，我們把原本的 Machine Learning 問題轉為了一個數學問題，目標就是要最小化我們的 cost function。為了解決這個問題，一個簡單的想法可以是：
 
+1. 先找個初始的 _Θ<sub>0</sub>_, _Θ<sub>1</sub>_
+2. 一直更動 _Θ<sub>0</sub>_, _Θ<sub>1</sub>_ 的值，減少 cost function _J(_Θ<sub>0</sub>_, _Θ<sub>1</sub>_)_，直到我們找到最小值為止
 
-### Gradient Descent for Linear Regression
+不過問題來了，我們要怎麼樣可以知道 _Θ<sub>0</sub>_, _Θ<sub>1</sub>_ 要怎麼變化才可以減少 cost function 的值呢？還好早就有數值方法可以幫你這個忙！我們這邊會用到 Gradient Descent 來對 _Θ<sub>0</sub>_, _Θ<sub>1</sub>_ 做 update，演算法如下：
+
+![](images/Machine Learning 2-3.png)
+
+其中，&alpha; 是 learning rate，代表 *Θ<sub>j</sub>* 更新的幅度。後面的
+
+![](images/Machine Learning 2- eq4.png)
+
+這項對於從前微積分還有一些印象的人應該知道這代表著 *Θ<sub>j</sub>* 的 derivative。
+
+那麼要如何找出 
+
+![](images/Machine Learning 2- eq4.png) 
+
+呢？讓我們來做點簡單的數學推導
 
 
 
