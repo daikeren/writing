@@ -77,7 +77,7 @@
 
 ### Gradient Descent Algorithm
 
-到目前為止，我們把原本的 Machine Learning 問題轉為了一個數學問題，目標就是要最小化我們的 cost function。為了解決這個問題，一個簡單的想法可以是：
+到目前為止，我們把原本的 Machine Learning 問題轉為了一個數學問題，目標就是要最小化我們的 cost function。為了解決這個問題，可以有個簡單的想法：
 
 1. 先找個初始的 _Θ<sub>0</sub>_, _Θ<sub>1</sub>_
 2. 一直更動 _Θ<sub>0</sub>_, _Θ<sub>1</sub>_ 的值，減少 cost function _J(_Θ<sub>0</sub>_, _Θ<sub>1</sub>_)_，直到我們找到最小值為止
@@ -102,7 +102,12 @@
 
 所以原來的演算法變成
 
+![](images/Machine Learning 2-4.png)
 
+到這邊為止終於推導完成 gradient descent algorithm，我們只要給定初始的 _Θ<sub>0</sub>_, _Θ<sub>1</sub>_，並且每個 iteration 分別去對 _Θ<sub>0</sub>_, _Θ<sub>1</sub>_  做更新，做後就可以求得我們的 hypothesis function _h_ 。然後再之後做預測的時候，只要將坪數 _x_ 帶入 _h_ 當中，就可以求得預測的房價 _y_。
 
 ### 結論
 
+還跟的上嗎？如果還跟的上的話恭喜你！因為之後大概就都是這種難度了。不過如果跟不上也別擔心，只要抓到一些演算法的重點跟感覺，相信當你需要用到的時候還是可以回來再看看。
+
+這篇我們講了在一個變數下的 linear regression，不過我們常常遇到的問題其實 feature variables 不只一個，那麼該怎麼辦呢？下一篇我們就會來解多變數的 linear regression problem。
